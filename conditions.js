@@ -75,44 +75,44 @@ const n4 =  41;
 const n5 =  70;
 const n6 =  100;
 
-if(n1 %2){
+if(n1 %2 === 0){
     console.log(n1 + ' est paire ✅');
 }
 else {
     console.log(n1 + ' Impaire ❌');
 }
 
-if(n2 %2){
-    console.log(n1 + ' est paire ✅');
+if(n2 %2 === 0){
+    console.log(n2 + ' est paire ✅');
 }
 else {
-    console.log(n1 + ' Impaire ❌');
+    console.log(n2 + ' Impaire ❌');
 }
 
-if(n3 %2){
-    console.log(n1 + ' est paire ✅');
+if(n3 %2 === 0){
+    console.log(n1=3 + ' est paire ✅');
 }
 else {
-    console.log(n1 + ' Impaire ❌');
+    console.log(n3 + ' Impaire ❌');
 }
 
-if(n4 %2){
-    console.log(n1 + ' est paire ✅');
+if(n4 %2 === 0){
+    console.log(n4 + ' est paire ✅');
 }
 else {
-    console.log(n1 + ' Impaire ❌');
+    console.log(n4 + ' Impaire ❌');
 }
 
-if(n5 %2){
-    console.log(n1 + ' est paire ✅');
+if(n5 %2 === 0){
+    console.log(n5 + ' est paire ✅');
 }
 else {
-    console.log(n1 + ' Impaire ❌');
+    console.log(n5 + ' Impaire ❌');
 }
 
-if(n6 %2){
-    console.log(n1 + ' est paire ✅');
+if(n6 %2 === 0){
+    console.log(n6 + ' est paire ✅');
 }
 else {
-    console.log(n1 + ' Impaire ❌');
+    console.log(n6 + ' Impaire ❌');
 }
