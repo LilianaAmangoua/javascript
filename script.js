@@ -30,8 +30,87 @@ function createMenuItem(text){
     return newElement;
 }
 
-const menuItem1 = createMenuItem("Item 1");
-const menuItem2 = createMenuItem("Item 2");
-const menuItem3 = createMenuItem("Item 3");
-const menuItem4 = createMenuItem("Item 4");
-const menuItem5 = createMenuItem("Item 5");
+let menuItem1 = createMenuItem("Item 1");
+let menuItem2 = createMenuItem("Item 2");
+let menuItem3 = createMenuItem("Item 3");
+let menuItem4 = createMenuItem("Item 4");
+let menuItem5 = createMenuItem("Item 5");
+
+// Exercice 3 
+
+let menu2 = document.createElement("ul");
+let header = document.querySelector("header");
+header.appendChild(menu2);
+menu.id = "menu2";
+
+function createAgainMenuItem(text){
+    let newElement = document.createElement("li");
+    newElement.innerText = text;
+    menu2.appendChild(newElement);
+    return newElement;
+}
+
+let menu2Item1 = createAgainMenuItem("Item 1 du menu 2");
+let menu2Item2 = createAgainMenuItem("Item 2 du menu 2");
+let menu2Item3 = createAgainMenuItem("Item 3 du menu 2");
+
+
+// Exercice 4
+menuItem1 = menu.removeChild(menuItem1);
+menu2.appendChild(menuItem1);
+
+menuItem5 = menu.removeChild(menuItem5);
+menu2.appendChild(menuItem5);
+
+// Exercice 5
+menu2Item1.innerText = "Changement de texte";
+menuItem5.innerText = "Changement de texte encore";
+
+// Exercice 6
+let head = document.querySelector("head");
+head.removeChild(head.lastElementChild); 
+
+// Exercice 7
+
+/**
+   * -------------------------------------------------------
+   * 7 - Créer une boucle qui permet de créer et d'injecter dans le body les éléments du tableau un nombre X de fois. 
+   * Chaque élément est l'enfant du précédent.
+   * Exemple (basé sur le tableau ci-dessus) : il faut créer 3 sections. Chaque section possède 3 div. Chaque div possède 3 paragraphes (avec du texte). Chaque paragraphe possède 3 spans (avec du texte et une classe, la même pour chaque span)
+   * -------------------------------------------------------
+*/
+
+const elementListToCreate = [
+    {
+       name: "section",
+       times: 3
+    },
+    {
+       name: "div",
+       times: 3
+    },
+    {
+       name: "p",
+       times: 1
+    },
+    {
+       name: "span",
+       times: 3
+    },
+];
+
+let element = null;
+let newElements = [];
+
+let main = document.querySelector("main");
+
+function createElementXTimes(tagName, time){
+    for(i = 0; i < time; i++){
+        element = document.createElement(tagName);
+        newElements.push(element);
+    }
+    return newElements;
+}
+
+let newSections = createElementXTimes(elementListToCreate[0].name, elementListToCreate[0].times);
+main.appendChild(newSections);
