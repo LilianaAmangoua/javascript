@@ -99,18 +99,29 @@ const elementListToCreate = [
     },
 ];
 
-let element = null;
-let newElements = [];
-
-let main = document.querySelector("main");
-
-function createElementXTimes(tagName, time){
+function createElementXTimes(tagName, time, parent){
     for(i = 0; i < time; i++){
-        element = document.createElement(tagName);
-        newElements.push(element);
+        let element = document.createElement(tagName);
+        console.log(element);
+        
+        parent.appendChild(element);
     }
-    return newElements;
 }
 
-let newSections = createElementXTimes(elementListToCreate[0].name, elementListToCreate[0].times);
-main.appendChild(newSections);
+
+let bodyElement = document.querySelector("body");
+
+for(let i = 0; i < elementListToCreate.length; i++){
+    if(i === 0){
+        createElementXTimes(elementListToCreate[i].name, elementListToCreate[i].times, bodyElement); 
+    }
+    else {
+        let parentArray = document.querySelectorAll(elementListToCreate[i -1].name);
+        parentArray.forEach((item) => createElementXTimes(elementListToCreate[i].name, elementListToCreate[i].times, item))
+        
+    }
+}
+
+
+
+
