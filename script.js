@@ -30,8 +30,64 @@ function createMenuItem(text){
     return newElement;
 }
 
-const menuItem1 = createMenuItem("Item 1");
-const menuItem2 = createMenuItem("Item 2");
-const menuItem3 = createMenuItem("Item 3");
-const menuItem4 = createMenuItem("Item 4");
-const menuItem5 = createMenuItem("Item 5");
+let menuItem1 = createMenuItem("Item 1 of menu 1");
+let menuItem2 = createMenuItem("Item 2 of menu 1");
+let menuItem3 = createMenuItem("Item 3 of menu 1");
+let menuItem4 = createMenuItem("Item 4 of menu 1");
+let menuItem5 = createMenuItem("Item 5 of menu 1");
+
+// Exercice 3
+
+let header = document.querySelector("header");
+
+let menu2 = document.createElement("ul");
+menu2.id = "menu2";
+header.appendChild(menu2);
+
+function createAgainMenuItem(text){
+    let newElement = document.createElement("li");
+    newElement.innerText = text;
+    menu2.appendChild(newElement);
+    return newElement;
+}
+
+let menu2Item1 = createAgainMenuItem("Item 1 of menu 2");
+let menu2Item2 = createAgainMenuItem("Item 2 of menu 2");
+let menu2Item3 = createAgainMenuItem("Item 3 of menu 2");
+
+// Exercice 4
+
+menuItem1 = menu.removeChild(menuItem1);
+menu2.appendChild(menuItem1);
+
+menuItem5 = menu.removeChild(menuItem5);
+menu2.appendChild(menuItem5);
+
+// Exercice 5
+
+menuItem1.innerText = "Changement de texte";
+menuItem5.innerText = "Changement de texte encore";
+
+// Exercice 6
+let head = document.querySelector("head");
+head.removeChild(head.lastElementChild);
+
+// Exercice 7
+const elementListToCreate = [
+    {
+       name: "section",
+       times: 3
+    },
+    {
+       name: "div",
+       times: 3
+    },
+    {
+       name: "p",
+       times: 1
+    },
+    {
+       name: "span",
+       times: 3
+    },
+]
