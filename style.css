@@ -1,0 +1,40 @@
+main {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.flowers {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    border-radius: 5px;
+    background-color: #f0ead2;
+    padding: 15px 20px;
+}
+
+.cart{
+    width: 20%;
+    height: 145vh;
+    background-color: #dde5b6;
+    padding: 5px 20px;
+    border-radius: 5px;
+}
+
+.bouquet-button {
+    border: 1px solid #6c584c;
+    background-color: #adc178;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.one-bouquet {
+    margin: 15px 15px;
+}
+
+.flowers-images {
+    height: 30vh;
+}
