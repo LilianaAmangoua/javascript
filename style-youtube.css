@@ -1,0 +1,32 @@
+*{
+    background-color: black;
+    color: white;
+}
+.main-section {
+    display: grid;
+    /*justify-content: center;
+    flex-wrap: wrap;*/
+    grid-template-columns:25% 25% 25% 25%;
+    grid-template-rows: 50vh 50vh  ;
+}
+
+.video {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.thumbnail {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.channel-image {
+    border-radius: 50%;
+    width: 60%;
+    margin-top: 20px;
+}
+
+.description {
+    display: flex;
+    width: 95%;
+}
