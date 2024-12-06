@@ -1,18 +1,82 @@
 *{
     background-color: black;
     color: white;
+    font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
+
+/*Menu*/
+.logo-youtube {
+    width: 8%; 
+    margin-top: 5px;
+    margin-bottom: 5px;  
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 90px;
+}
+
+.profile-image {
+    border-radius: 50%;
+    width: 50%;
+    cursor: pointer;
+}
+
+
+/*Search Bar*/
+form {
+    background-color: black;
+    width: 547px;
+    height: 44px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid #aaaaaa67;
+    
+}
+
+input {
+    all: unset;
+    font: 16px system-ui;
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    padding: 6px 15px;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+}
+  
+svg {
+    color: #fff;
+    fill: currentColor;
+    width: 24px;
+    height: 24px;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+/*Vidéos*/
 .main-section {
     display: grid;
-    /*justify-content: center;
-    flex-wrap: wrap;*/
     grid-template-columns:25% 25% 25% 25%;
-    grid-template-rows: 50vh 50vh  ;
+    grid-template-rows: 50vh 50vh;
 }
 
 .video {
     margin-left: 5px;
     margin-right: 5px;
+    cursor: pointer;
 }
 
 .thumbnail {
@@ -29,4 +93,28 @@
 .description {
     display: flex;
     width: 95%;
+}
+
+.views-and-date-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.views-and-date-container > p {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #aaa;
+}
+
+.video-title{
+    font-weight: 500;
+}
+
+.titles-div p {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.titles-div h3 {
+    margin-bottom: 8px;
 }
